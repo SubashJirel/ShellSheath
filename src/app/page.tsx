@@ -103,7 +103,7 @@ export default function Home() {
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
               />
-              <Phone className="w-64" imgSrc="/testimonials/justin.jpg" />
+              <Phone className="w-64" imgSrc="/testimonials/justin2.jpg" />
             </div>
           </div>
         </MaxWidthWrapper>
