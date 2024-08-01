@@ -1,5 +1,6 @@
 import { db } from '@/db';
 import { notFound } from 'next/navigation';
+import DesignConfigurator from './DesignConfigurator';
 
 interface PageProps {
   searchParams: {
@@ -13,7 +14,24 @@ const Page = async ({ searchParams }: PageProps) => {
     return notFound();
   }
 
-  return <p>{id}</p>;
+  //Here configuration is the modal name that we mad prisma
+  const configuration = await db.configuration.findUnique({
+    where: { id },
+  });
+
+  if (!configuration) {
+    return notFound();
+  }
+
+  const { imageUrl, width, height } = configuration;
+
+  return (
+    <DesignConfigurator
+      configId={configuration.id}
+      imageDimensions={{ width, height }}
+      imageUrl={imageUrl}
+    />
+  );
 };
 
 export default Page;
