@@ -44,7 +44,9 @@ const DesignConfigurator = ({
   const { toast } = useToast();
   const router = useRouter();
 
-  //here mutationKey: ['save-config'], ['save-config'] is used for caching
+  //here in mutationKey: ['save-config'], ['save-config'] is used for caching
+  // mutate is a function we get from useMutation and we've renamed it as saveConfig. So when we call saveConfig then we have to pass those args: SaveConfigArgs parameters. And that invoked function will save croped image and update the db i.e. calls this saveConfiguration(), _saveConfig(args)
+
   const { mutate: saveConfig, isPending } = useMutation({
     mutationKey: ['save-config'],
     mutationFn: async (args: SaveConfigArgs) => {
@@ -96,7 +98,7 @@ const DesignConfigurator = ({
         top: caseTop,
         width,
         height,
-      } = phoneCaseRef.current!.getBoundingClientRect();
+      } = phoneCaseRef.current!.getBoundingClientRect(); // ! means the value is there
 
       const { left: containerLeft, top: containerTop } =
         containerRef.current!.getBoundingClientRect();
