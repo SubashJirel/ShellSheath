@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shell Sheath - Custom Phone Case Creator
 
-## Getting Started
+Welcome to Shell Sheath! This Next.js web application allows users to upload their images and place them on a phone case. Once the design is finalized, the phone case will be delivered to the user.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is hosted at `https://shell-sheath.vercel.app/`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Image Upload**: Users can upload their images.
+- **Image Preview**: See how the image looks on a phone case.
+- **Custom Design**: Adjust the image to fit perfectly on the phone case.
+- **Order Delivery**: Get the custom phone case delivered.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies
 
-## Learn More
+- **Next.js**: React framework for server-side rendering.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Uploadthing**: Image upload and management.
+- **Stripe**: Payment processing for order fulfillment.
+- **PostgresSql/prisma**: PostgreSQL as the database and Prisma as the ORM for database management and queries.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/subashjirel/shell-sheath.git
+   cd shell-sheath
+   ```
 
-## Deploy on Vercel
+2. Install dependencies
+   ```bash
+       npm install
+   ```
+3. Then run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
